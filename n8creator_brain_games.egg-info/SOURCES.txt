@@ -1,0 +1,8 @@
+brain_games/__init__.py
+brain_games/scripts/__init__.py
+brain_games/scripts/brain_games.py
+n8creator_brain_games.egg-info/PKG-INFO
+n8creator_brain_games.egg-info/SOURCES.txt
+n8creator_brain_games.egg-info/dependency_links.txt
+n8creator_brain_games.egg-info/entry_points.txt
+n8creator_brain_games.egg-info/top_level.txt
