@@ -20,8 +20,8 @@ def brain_even(name):
             print('Correct!')
             correct_counter += 1
         else:
-            print("\'{0}\' is wrong answer ;(. Correct answer was \'{1}\'.".
-                format(user_answer, correct_answer))                
+            print("'{0}' is wrong answer ;(. Correct answer was \
+                  '{1}'.".format(user_answer, correct_answer))
             print("Let's try again, {0}!".format(name))
             break
 
