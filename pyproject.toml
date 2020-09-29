@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "n8creator_brain_games"
-version = "0.1.0"
+version = "0.1.2"
 description = ""
 authors = ["Dmitry Volkov <n8creator@pm.me>"]
 packages = [
