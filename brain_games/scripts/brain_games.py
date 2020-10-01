@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Hexlet 1-st project."""
+"""Brain Games template"""
 
-from brain_games.cli import welcome_user
+from brain_games.engine import greeting, get_username
 
 
 def main():
     """Welcome user and return his name."""
-    print('Welcome to Brain Games!')
-    welcome_user()
+    greeting()
+    get_username()
 
 
 if __name__ == '__main__':
