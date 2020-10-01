@@ -4,3 +4,6 @@
 
 ## Игра "Проверка на четность"
 <a href="https://asciinema.org/a/Tl67SJ4pkRB4WKynyAQUQhVfV" target="_blank"><img src="https://asciinema.org/a/Tl67SJ4pkRB4WKynyAQUQhVfV.svg" /></a>
+
+## Игра "Калькулятор"
+<a href="https://asciinema.org/a/2wmvHTFfYkIIWRHg1fQjmHdad" target="_blank"><img src="https://asciinema.org/a/2wmvHTFfYkIIWRHg1fQjmHdad.svg" /></a>
