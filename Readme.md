@@ -7,3 +7,6 @@
 
 ## Игра "Калькулятор"
 <a href="https://asciinema.org/a/2wmvHTFfYkIIWRHg1fQjmHdad" target="_blank"><img src="https://asciinema.org/a/2wmvHTFfYkIIWRHg1fQjmHdad.svg" /></a>
+
+## Игра "Наибольший общий делитель"
+<a href="https://asciinema.org/a/2vzDy60oWHv50fsrilqRdwn91" target="_blank"><img src="https://asciinema.org/a/2vzDy60oWHv50fsrilqRdwn91.svg" /></a>
