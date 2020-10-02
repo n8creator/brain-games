@@ -1,4 +1,4 @@
-"""Brain Games engine: major functions described."""
+"""Brain Games engine: engine functions described."""
 
 import prompt
 

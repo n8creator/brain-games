@@ -13,3 +13,6 @@
 
 ## Игра "Прогрессия"
 <a href="https://asciinema.org/a/cAeoJT4E32vmh4VMjveQzl4cd" target="_blank"><img src="https://asciinema.org/a/cAeoJT4E32vmh4VMjveQzl4cd.svg" /></a>
+
+## Игра "Простое ли число?"
+<a href="https://asciinema.org/a/ngqc2PWd0D3L5erkoUn87EkWT" target="_blank"><img src="https://asciinema.org/a/ngqc2PWd0D3L5erkoUn87EkWT.svg" /></a>
