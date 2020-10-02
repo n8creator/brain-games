@@ -1,10 +1,19 @@
 [tool.poetry]
 name = "n8creator_brain_games"
 version = "0.1.6"
-description = ""
+description = "Hexlet Brain Games project. Contains Even, Calc, GCD, Progression and Prime games"
 authors = ["Dmitry Volkov <n8creator@pm.me>"]
 packages = [
   { include = "brain_games" },
+  ]
+
+repository = "https://github.com/n8creator/python-project-lvl1"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3.6",
+  "Environment :: Console",
+  "Natural Language :: English",
+  "Topic :: Games/Entertainment :: Puzzle Games"
   ]
 
 [tool.poetry.dependencies]
