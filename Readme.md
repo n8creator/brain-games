@@ -10,3 +10,6 @@
 
 ## Игра "Наибольший общий делитель"
 <a href="https://asciinema.org/a/2vzDy60oWHv50fsrilqRdwn91" target="_blank"><img src="https://asciinema.org/a/2vzDy60oWHv50fsrilqRdwn91.svg" /></a>
+
+## Игра "Прогрессия"
+<a href="https://asciinema.org/a/cAeoJT4E32vmh4VMjveQzl4cd" target="_blank"><img src="https://asciinema.org/a/cAeoJT4E32vmh4VMjveQzl4cd.svg" /></a>
