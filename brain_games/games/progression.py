@@ -2,37 +2,35 @@
 """Brain Progression game script."""
 
 from random import randint, choice
-from brain_games.engine import greeting, get_username, ask_question, \
-    check_answer, congratulate
+
+GAME_INTRO = 'What number is missing in the progression?\n'
+MIN_PROGR_VALUE, MAX_PROGR_VALUE = 1, 100
+MIN_STEP_VALUE, MAX_STEP_VALUE = 1, 10
+PROGRESSION_LENGTH = 10
 
 
-def brain_progression():
+def generate_game():
     """@name Brain-Game Progression Script."""
 
-    greeting()
-    print("What number is missing in the progression?\n")
-    name = get_username()
+    # Set arythmetic progression values
+    value, step = randint(MIN_PROGR_VALUE, MAX_PROGR_VALUE), \
+        randint(MIN_STEP_VALUE, MAX_STEP_VALUE)
 
-    for _ in range(1, 4):
-        # Generate progression list
-        value, step = randint(1, 100), randint(1, 10)
-        progress_list = []
+    # Generate progression list with values in it
+    progress_list = []
+    for _ in range(0, PROGRESSION_LENGTH):
+        progress_list.append(str(value))
+        value += step
 
-        for _ in range(0, 10):
-            progress_list.append(str(value))
-            value += step
+    # Select random value in progression list
+    correct_answer = choice(progress_list)
+    answer_index = progress_list.index(correct_answer)
 
-        # Selecting random value in progression list and Hiding it
-        correct_answer = choice(progress_list)
-        answer_index = progress_list.index(correct_answer)
-        progress_list[answer_index] = '..'
+    # Hide selected value in progression list
+    progress_list[answer_index] = '..'
 
-        # Asking user for a question
-        expression = ' '.join(progress_list)
-        user_answer = ask_question(expression)
+    # Ask user for a question
+    question = ' '.join(progress_list)
 
-        # Check user answer
-        if check_answer(user_answer, correct_answer, name) is False:
-            exit()
-
-    congratulate(name)
+    # Return generate_game() function values
+    return question, correct_answer

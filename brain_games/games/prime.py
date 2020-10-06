@@ -2,25 +2,30 @@
 """Brain Prime game script."""
 
 from random import randint
-from brain_games.engine import greeting, get_username, ask_question, \
-    check_answer, congratulate
-from brain_games.functions import is_Prime
+GAME_INTRO = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
+MIN_RAND_VALUE = 1
+MAX_RAND_VALUE = 20
 
 
-def brain_prime():
-    """@name Brain-Game Prime Script."""
+def generate_game():
+    """@name Brain-Game data generator."""
 
-    greeting()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".\n')
-    name = get_username()
+    question = randint(MIN_RAND_VALUE, MAX_RAND_VALUE)
+    correct_answer = 'yes' if is_Prime(question) else 'no'
 
-    for _ in range(1, 4):
-        value = randint(1, 20)
+    return question, correct_answer
 
-        user_answer = ask_question(value)
-        correct_answer = 'yes' if is_Prime(value) else 'no'
 
-        if check_answer(user_answer, correct_answer, name) is False:
-            exit()
-
-    congratulate(name)
+def is_Prime(num):
+    if num > 1:
+        # Check if the number has a multiple denominators
+        for i in range(2, num):
+            if (num % i) == 0:
+                return False
+                break
+        # Number is prime if it doesn't have any denominators
+        else:
+            return True
+    # If number is less than or equal to 1, it is not prime
+    else:
+        return False

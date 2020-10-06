@@ -1,25 +1,18 @@
-#!/usr/bin/env python3
-"""Brain Even game script."""
+"""Brain Even data generator."""
 
 from random import randint
-from brain_games.engine import greeting, get_username, ask_question, \
-    check_answer, congratulate
+GAME_INTRO = 'Answer "yes" if number is Even otherwise answer "no".\n'
+MIN_VALUE, MAX_VALUE = 1, 100
 
 
-def even():
-    """@name Brani-Game Even Script."""
+def generate_game():
+    """@name Brain Even data generator."""
 
-    greeting()
-    print('Answer "yes" if number is Even otherwise answer "no".\n')
-    name = get_username()
+    # Generate ranom number
+    question = randint(MIN_VALUE, MAX_VALUE)
 
-    for _ in range(1, 4):
-        guess_value = randint(0, 100)
+    # Check if generated number is even
+    correct_answer = 'yes' if (question % 2) == 0 else 'no'
 
-        user_answer = ask_question(guess_value)
-        correct_answer = 'yes' if (guess_value % 2) == 0 else 'no'
-
-        if check_answer(user_answer, correct_answer, name) is False:
-            exit()
-
-    congratulate(name)
+    # Return function values
+    return question, correct_answer

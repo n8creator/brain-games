@@ -3,24 +3,18 @@
 
 from random import randint
 from math import gcd
-from brain_games.engine import greeting, get_username, ask_question, \
-    check_answer, congratulate
+
+GAME_INTRO = 'Find the greatest common divisor of given numbers.\n'
+MIN_VALUE = 1
+MAX_VALUE = 100
 
 
-def brain_gcd():
-    """@name Brain-Game GCD Script."""
+def generate_game():
+    """@name Brain GCD data generator."""
 
-    greeting()
-    print('Find the greatest common divisor of given numbers.\n')
-    name = get_username()
+    value_1, value_2 = randint(MIN_VALUE, MAX_VALUE), \
+        randint(MIN_VALUE, MAX_VALUE)
+    question = '{0} {1}'.format(value_1, value_2)
+    correct_answer = gcd(value_1, value_2)
 
-    for _ in range(1, 4):
-        value_1, value_2 = randint(1, 100), randint(1, 100)
-
-        user_answer = int(ask_question('{0} {1}'.format(value_1, value_2)))
-        correct_answer = gcd(value_1, value_2)
-
-        if check_answer(user_answer, correct_answer, name) is False:
-            exit()
-
-    congratulate(name)
+    return question, str(correct_answer)

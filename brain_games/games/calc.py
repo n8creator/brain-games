@@ -2,28 +2,32 @@
 """Brain Calc game script."""
 
 from random import randint, choice
-from brain_games.engine import greeting, get_username, ask_question, \
-    check_answer, congratulate
+import operator
+
+GAME_INTRO = 'What is the result of the expression?\n'
+MIN_RAND_VALUE, MAX_RAND_VALUE = 1, 10
 
 
-def calc():
+def generate_game():
     """Brain-Game Calculator Script."""
 
-    greeting()
-    print('What is the result of the expression?\n')
-    name = get_username()
-
+    # Set list of allowed operators & select random operator for the game
     opearators_list = ['*', '-', '+']
+    selected_operator = choice(opearators_list)
 
-    for _ in range(1, 4):
-        val_1, val_2 = randint(0, 10), randint(0, 10)
-        operator = choice(opearators_list)
-        expression = str(val_1) + ' ' + operator + ' ' + str(val_2)
+    # Set values used in the calc game
+    value_1, value_2 = randint(MIN_RAND_VALUE, MAX_RAND_VALUE), \
+        randint(MIN_RAND_VALUE, MAX_RAND_VALUE)
 
-        user_answer = int(ask_question(expression))
-        correct_answer = int(eval(expression))
+    # Ask user for a question
+    question = str(value_1) + ' ' + selected_operator + ' ' + str(value_2)
 
-        if check_answer(user_answer, correct_answer, name) is False:
-            exit()
+    # Calculate correct answer (alternative to switch-case) by using dict{}
+    correct_answer = {
+        '*': operator.mul(value_1, value_2),
+        '-': operator.sub(value_1, value_2),
+        '+': operator.add(value_1, value_2)
+    }[selected_operator]
 
-    congratulate(name)
+    # Return function values
+    return question, str(correct_answer)

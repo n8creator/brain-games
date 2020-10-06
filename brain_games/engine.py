@@ -1,37 +1,39 @@
-"""Brain Games engine: engine functions described."""
+"""Brain Games engine: the basic logic of the game described."""
 
 import prompt
+NUM_OF_ROUNDS = 3
 
 
-def greeting():
-    """Print Welcome message."""
+def play_game(game_name):
+    # Print Welcome message
     print('Welcome to Brain Games!')
+    print(game_name.GAME_INTRO)
 
-
-def get_username():
-    """Ask user for his name and greet him"""
+    # Ask user for his name and greet him
     name = prompt.string('May I have your name?: ')
     print('Hello, {0}!\n'.format(name))
-    return name
 
+    # Start game
+    counter = 0
+    while counter < NUM_OF_ROUNDS:
+        # Getting question and correct_answer from game generator
+        question, correct_answer = game_name.generate_game()
 
-def ask_question(question_expression):
-    """Ask user for question."""
-    print('Question: ', question_expression)
-    return prompt.string('Your answer: ')
+        # Ask user for question & convert answer to int
+        print('Question: ', question)
+        user_answer = prompt.string('Your answer: ')
 
+        # Check answer given by user
+        if user_answer == correct_answer:
+            print('Correct!')
+            counter += 1
+        else:
+            print("'{0}' is wrong answer ;(. Correct answer was '{1}'.\
+                " .format(user_answer, correct_answer))
+            print("Let's try again, {0}!".format(name))
 
-def check_answer(user_answer, correct_answer, name):
-    """Check answer given by user."""
-    if user_answer == correct_answer:
-        print('Correct!')
-    else:
-        print("'{0}' is wrong answer ;(. Correct answer was '{1}'.\
-              " .format(user_answer, correct_answer))
-        print("Let's try again, {0}!".format(name))
-        return False
+            # Exit from the game if at least one answer is incorrect
+            exit()
 
-
-def congratulate(name):
-    """Congratulate user if he correctrly answered for 3 questions"""
+    # Congratulate user if he correctrly answered for 3 questions
     print('Congratulations, {0}!'.format(name))

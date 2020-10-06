@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Brain GCD call script."""
+"""Brain Progression call script."""
 
-from brain_games.games.progression import brain_progression
+from brain_games.engine import play_game
+from brain_games.games import progression
 
 
 def main():
-    brain_progression()
+    """ Start Brain Progression game."""
+    play_game(progression)
 
 
 if __name__ == '__main__':
