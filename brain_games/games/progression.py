@@ -10,7 +10,14 @@ PROGRESSION_LENGTH = 10
 
 
 def generate_game():
-    """@name Brain-Game Progression Script."""
+    """Brain Games Progression Function.
+
+    Generates arithmetic progression list using some random values. Then
+    hiding some random value in progression list.
+
+    Returns:
+        tuple: question guessed to the user and correct answer
+    """
 
     # Set arythmetic progression values
     value, step = randint(MIN_PROGR_VALUE, MAX_PROGR_VALUE), \
@@ -32,5 +39,5 @@ def generate_game():
     # Ask user for a question
     question = ' '.join(progress_list)
 
-    # Return generate_game() function values
+    # Return function values
     return question, correct_answer

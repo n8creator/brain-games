@@ -1,10 +1,20 @@
-"""Brain Games engine: the basic logic of the game described."""
+"""Brain Games Engine: the basic logic of the game described."""
 
 import prompt
+
 NUM_OF_ROUNDS = 3
 
 
 def play_game(game_name):
+    """Brain Game Engine function.
+
+    Implemented a unified logic and workflow for all games in brain_games.games
+    module (calc, even, gcd, progression and prime).
+
+    Args:
+        game_name (str): name of the game used in engine.
+    """
+
     # Print Welcome message
     print('Welcome to Brain Games!')
     print(game_name.GAME_INTRO)
@@ -19,7 +29,7 @@ def play_game(game_name):
         # Getting question and correct_answer from game generator
         question, correct_answer = game_name.generate_game()
 
-        # Ask user for question & convert answer to int
+        # Ask user for question
         print('Question: ', question)
         user_answer = prompt.string('Your answer: ')
 

@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-"""Brain Calc game script."""
+"""Brain Game Calculation Module."""
 
 from random import randint, choice
 import operator
@@ -9,7 +8,14 @@ MIN_RAND_VALUE, MAX_RAND_VALUE = 1, 10
 
 
 def generate_game():
-    """Brain-Game Calculator Script."""
+    """Brain Games Calculator Function.
+
+    Function generates 2 random values and calculate result using random
+    mathematical operator from the list.
+
+    Returns:
+        tuple: question guessed to the user and correct answer
+    """
 
     # Set list of allowed operators & select random operator for the game
     opearators_list = ['*', '-', '+']
