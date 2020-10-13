@@ -17,7 +17,7 @@ def play_game(game_name):
 
     # Print Welcome message
     print('Welcome to Brain Games!')
-    print(game_name.GAME_INTRO)
+    print(game_name.GAME_INTRO + '\n')
 
     # Ask user for his name and greet him
     name = prompt.string('May I have your name?: ')

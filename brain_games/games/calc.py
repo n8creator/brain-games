@@ -3,7 +3,7 @@
 from random import randint, choice
 import operator
 
-GAME_INTRO = 'What is the result of the expression?\n'
+GAME_INTRO = 'What is the result of the expression?'
 MIN_RAND_VALUE, MAX_RAND_VALUE = 1, 10
 
 

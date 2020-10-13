@@ -3,7 +3,7 @@
 
 from random import randint, choice
 
-GAME_INTRO = 'What number is missing in the progression?\n'
+GAME_INTRO = 'What number is missing in the progression?'
 MIN_PROGR_VALUE, MAX_PROGR_VALUE = 1, 100
 MIN_STEP_VALUE, MAX_STEP_VALUE = 1, 10
 PROGRESSION_LENGTH = 10

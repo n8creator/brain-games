@@ -3,7 +3,7 @@
 from random import randint
 from math import gcd
 
-GAME_INTRO = 'Find the greatest common divisor of given numbers.\n'
+GAME_INTRO = 'Find the greatest common divisor of given numbers.'
 MIN_VALUE = 1
 MAX_VALUE = 100
 

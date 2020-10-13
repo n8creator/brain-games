@@ -2,7 +2,7 @@
 
 from random import randint
 
-GAME_INTRO = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
+GAME_INTRO = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 MIN_RAND_VALUE = 1
 MAX_RAND_VALUE = 20
 
