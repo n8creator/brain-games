@@ -6,7 +6,6 @@ authors = ["Dmitry Volkov <n8creator@pm.me>"]
 packages = [
   { include = "brain_games" },
   ]
-
 repository = "https://github.com/n8creator/python-project-lvl1"
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -30,8 +29,7 @@ brain-calc = "brain_games.scripts.brain_calc:main"
 brain-gcd = "brain_games.scripts.brain_gcd:main"
 brain-progression = "brain_games.scripts.brain_progression:main"
 brain-prime = "brain_games.scripts.brain_prime:main"
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
-
-
