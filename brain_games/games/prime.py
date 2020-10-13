@@ -40,12 +40,11 @@ def is_prime(num):
         bool: True if value is prime, False otherwise.
     """
 
-    if num > 1:
-        # Check if the number has a multiple denominators
-        for i in range(2, num):
-            # Number is prime if it doesn't have any denominators
-            return False if (num % i) == 0 else True
-
-    # If number is less than or equal to 1, it is not prime
-    else:
+    # If number is lesser than 1, it is not prime
+    if num < 2:
         return False
+    # Check if the number has a multiple denominators
+    for divider in range(2, round(num / 2) + 1):  # '+ 1' for case 'num == 4'
+        if num % divider == 0:
+            return False
+    return True
