@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "n8creator_brain_games"
-version = "0.2.0"
+version = "0.2.1"
 description = "Hexlet Brain Games project. Contains Even, Calc, GCD, Progression and Prime games"
 authors = ["Dmitry Volkov <n8creator@pm.me>"]
 packages = [
