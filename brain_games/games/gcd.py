@@ -8,7 +8,7 @@ MIN_VALUE = 1
 MAX_VALUE = 100
 
 
-def generate_game():
+def generate_round():
     """Brain Games GCD Function.
 
     Function generates 2 random values and calculate GCD value using

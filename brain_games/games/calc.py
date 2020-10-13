@@ -7,7 +7,7 @@ GAME_INTRO = 'What is the result of the expression?'
 MIN_RAND_VALUE, MAX_RAND_VALUE = 1, 10
 
 
-def generate_game():
+def generate_round():
     """Brain Games Calculator Function.
 
     Function generates 2 random values and calculate result using random

@@ -27,7 +27,7 @@ def play_game(game_name):
     counter = 0
     while counter < NUM_OF_ROUNDS:
         # Getting question and correct_answer from game generator
-        question, correct_answer = game_name.generate_game()
+        question, correct_answer = game_name.generate_round()
 
         # Ask user for question
         print('Question: ', question)

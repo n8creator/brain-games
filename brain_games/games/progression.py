@@ -9,7 +9,7 @@ MIN_STEP_VALUE, MAX_STEP_VALUE = 1, 10
 PROGRESSION_LENGTH = 10
 
 
-def generate_game():
+def generate_round():
     """Brain Games Progression Function.
 
     Generates arithmetic progression list using some random values. Then

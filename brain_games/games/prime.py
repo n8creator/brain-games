@@ -7,7 +7,7 @@ MIN_RAND_VALUE = 1
 MAX_RAND_VALUE = 20
 
 
-def generate_game():
+def generate_round():
     """Brain Games Prime Function.
 
     Function generates some random value and checks if this numuber is prime
