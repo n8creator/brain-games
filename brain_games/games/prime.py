@@ -21,13 +21,13 @@ def generate_game():
     question = randint(MIN_RAND_VALUE, MAX_RAND_VALUE)
 
     # Calculate correct answer
-    correct_answer = 'yes' if is_Prime(question) else 'no'
+    correct_answer = 'yes' if is_prime(question) else 'no'
 
     # Return function values
     return question, correct_answer
 
 
-def is_Prime(num):
+def is_prime(num):
     """Checks if num value is prime.
 
     A prime number is a natural number greater than 1 that is not a
